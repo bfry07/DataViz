@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Olja Busbaher, Brian Fry, and Paul Selling" />
+
+
+<title>DC Migration</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Portfolio</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Data Visualizations
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lab03FullLabReport.html">Hallucinogen Use</a>
+    </li>
+    <li>
+      <a href="lab04.html">DC Migration</a>
+    </li>
+    <li>
+      <a href="lab06.html">Diamonds</a>
+    </li>
+    <li>
+      <a href="lab05.html">Women in Congress</a>
+    </li>
+    <li>
+      <a href="Final_Project_Final.html">Race and Electoral &amp; Economic Outcomes in the United States</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">DC Migration</h1>
+<h4 class="author"><em>Olja Busbaher, Brian Fry, and Paul Selling</em></h4>
+
+</div>
+
+
+<p>This chunk loads in our data and the libraries we will need.</p>
+<pre class="r"><code>library(tidyverse)
+DC_data &lt;- read.csv(&quot;DCMigration_full.csv&quot;)</code></pre>
+<p>This chunk mutates the data to isolate Virgina and Maryland from the original dataset.</p>
+<pre class="r"><code>modified_data &lt;- mutate(DC_data,
+                        region = ifelse(residence == &quot;Maryland&quot;, &quot;Maryland&quot;,
+                                        ifelse(residence == &quot;Virginia&quot;, &quot;Virginia&quot;, as.character(region))))</code></pre>
+<p>This chunk creates the regions that we will need plus Maryland and Virginia.</p>
+<pre class="r"><code>dc_data_sum_prop &lt;- summarize(group_by(modified_data,YEAR),
+                              prop_stayed=mean(region==&quot;Stayed in DC&quot;),
+                              prop_south=mean(region==&quot;Other Southern States&quot;),
+                              prop_west=mean(region==&quot;West&quot;),
+                              prop_midwest=mean(region==&quot;Midwest&quot;),
+                              prop_northeast=mean(region==&quot;Northeast&quot;),
+                              prop_virginia=mean(region==&quot;Virginia&quot;),
+                              prop_maryland=mean(region==&quot;Maryland&quot;),
+                              prop_other=mean(region==&quot;Other&quot;))</code></pre>
+<p>This chunk gathers and relabels the data we will need and reorders it in the way we need it to be for creating our graphs later.</p>
+<pre class="r"><code>DCMigration &lt;- select(dc_data_sum_prop, YEAR, Stayed=prop_stayed, West=prop_west, South=prop_south, Midwest=prop_midwest, Northeast=prop_northeast, Virginia=prop_virginia, Maryland=prop_maryland)
+DCMigration.gather &lt;- gather(DCMigration,-YEAR, key=region, value=propMoved)</code></pre>
+<div id="graph-1-stack-bar-chart" class="section level2">
+<h2>Graph 1: Stack Bar Chart</h2>
+<p>This chunk produces a stacked bar chart displaying the region of residence plus Maryland and Virginia for people born in DC in 10 year segments.</p>
+<pre class="r"><code>ggplot(data=DCMigration.gather, aes(x=YEAR, y=propMoved, fill=region))+
+  geom_bar(stat=&quot;identity&quot;)+
+  scale_x_continuous(limits=c(1845,2005),breaks=seq(1850,2000,by=10),name=&quot;&quot;)+
+  scale_fill_manual(name=&quot;Legend&quot;, values=c(&quot;Stayed&quot;=&quot;gainsboro&quot;,
+                     &quot;Midwest&quot;=&quot;royalblue1&quot;,
+                     &quot;Northeast&quot;=&quot;hotpink3&quot;,
+                     &quot;South&quot;=&quot;greenyellow&quot;,
+                     &quot;Virginia&quot;=&quot;green&quot;,
+                     &quot;Maryland&quot;=&quot;red&quot;,
+                     &quot;West&quot;=&quot;darkgoldenrod&quot;))</code></pre>
+<p><img src="lab04_files/figure-html/stacked%20bar%20chart-1.png" width="672" /></p>
+<pre class="r"><code>  labs(title=&quot;Where People Born in D.C. have Moved to:&quot;)</code></pre>
+<pre><code>## $title
+## [1] &quot;Where People Born in D.C. have Moved to:&quot;
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;labels&quot;</code></pre>
+</div>
+<div id="graph-2-line-graph" class="section level2">
+<h2>Graph 2: Line Graph</h2>
+<p>This chunk produces a line graph that displays the region of residence plus Maryland and Virginia for people born in DC in ten year segments.</p>
+<pre class="r"><code>ggplot(DCMigration.gather, aes(x=YEAR, y=propMoved))+
+  geom_line(aes(group=region, color=region))+
+  scale_x_continuous(limits=c(1845,2005),breaks=seq(1850,2000,by=10),name=&quot;&quot;)+
+  labs(title=&quot;Where People Born in D.C. have moved to:&quot;)</code></pre>
+<p><img src="lab04_files/figure-html/line%20graph-1.png" width="672" /></p>
+</div>
+<div id="graph-3-stream-diagram" class="section level2">
+<h2>Graph 3: Stream Diagram</h2>
+<p>This is the first attempt. It creaes a basic stream diagram.</p>
+<pre class="r"><code>ggplot(DCMigration.gather) + geom_area(aes(x=YEAR, y=propMoved, fill=region))+
+  labs(title=&quot;Where People Born in D.C. have Moved to:&quot;)+
+  scale_fill_manual(name=&quot;Legend&quot;, values=c(&quot;Stayed&quot;=&quot;gainsboro&quot;,
+                     &quot;Midwest&quot;=&quot;royalblue1&quot;,
+                     &quot;Northeast&quot;=&quot;hotpink3&quot;,
+                     &quot;South&quot;=&quot;greenyellow&quot;,
+                     &quot;Virginia&quot;=&quot;green&quot;,
+                     &quot;Maryland&quot;=&quot;red&quot;,
+                     &quot;West&quot;=&quot;darkgoldenrod&quot;))</code></pre>
+<p><img src="lab04_files/figure-html/stream%20diagram%20basic-1.png" width="672" /></p>
+<pre class="r"><code>  labs(title=&quot;Where People Born in D.C. have Moved to:&quot;)</code></pre>
+<pre><code>## $title
+## [1] &quot;Where People Born in D.C. have Moved to:&quot;
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;labels&quot;</code></pre>
+<p>This is the second attempt. It creates white space between each portion of the stream.</p>
+<pre class="r"><code>eps &lt;- .Machine$double.eps
+
+DCMigration.gather$lowHeight &lt;- NA
+DCMigration.gather$highHeight &lt;- NA
+DCMigration.gather[DCMigration.gather$region==&quot;South&quot;,&quot;lowHeight&quot;] &lt;- 0
+DCMigration.gather[DCMigration.gather$region==&quot;South&quot;,&quot;highHeight&quot;] &lt;- DCMigration$South - eps
+DCMigration.gather[DCMigration.gather$region==&quot;Northeast&quot;,&quot;lowHeight&quot;] &lt;- DCMigration$South + eps
+DCMigration.gather[DCMigration.gather$region==&quot;Northeast&quot;,&quot;highHeight&quot;] &lt;- DCMigration$South + DCMigration$Northeast - eps
+DCMigration.gather[DCMigration.gather$region==&quot;Midwest&quot;,&quot;lowHeight&quot;] &lt;- DCMigration$South + DCMigration$Northeast + eps
+DCMigration.gather[DCMigration.gather$region==&quot;Midwest&quot;,&quot;highHeight&quot;] &lt;- DCMigration$South + DCMigration$Northeast + DCMigration$Midwest - eps
+DCMigration.gather[DCMigration.gather$region==&quot;West&quot;,&quot;lowHeight&quot;] &lt;- DCMigration$South + DCMigration$Northeast + DCMigration$Midwest + eps
+DCMigration.gather[DCMigration.gather$region==&quot;West&quot;,&quot;highHeight&quot;] &lt;- DCMigration$South + DCMigration$Northeast + DCMigration$Midwest + DCMigration$West - eps
+DCMigration.gather[DCMigration.gather$region==&quot;Virginia&quot;,&quot;lowHeight&quot;] &lt;- DCMigration$South + DCMigration$Northeast + DCMigration$Midwest + DCMigration$West + eps
+DCMigration.gather[DCMigration.gather$region==&quot;Virginia&quot;,&quot;highHeight&quot;] &lt;- DCMigration$South + DCMigration$Northeast + DCMigration$Midwest + DCMigration$West + DCMigration$Virginia - eps
+DCMigration.gather[DCMigration.gather$region==&quot;Maryland&quot;,&quot;lowHeight&quot;] &lt;- DCMigration$South + DCMigration$Northeast + DCMigration$Midwest + DCMigration$West + DCMigration$Virginia + eps
+DCMigration.gather[DCMigration.gather$region==&quot;Maryland&quot;,&quot;highHeight&quot;] &lt;- DCMigration$South + DCMigration$Northeast + DCMigration$Midwest + DCMigration$West + DCMigration$Virginia + DCMigration$Maryland - eps
+DCMigration.gather[DCMigration.gather$region==&quot;Stayed&quot;,&quot;lowHeight&quot;] &lt;- DCMigration$South + DCMigration$Northeast + DCMigration$Midwest + DCMigration$West + DCMigration$Virginia + DCMigration$Maryland + eps
+DCMigration.gather[DCMigration.gather$region==&quot;Stayed&quot;,&quot;highHeight&quot;] &lt;- DCMigration$South + DCMigration$Northeast + DCMigration$Midwest + DCMigration$West + DCMigration$Virginia + DCMigration$Maryland + DCMigration$Stayed - eps
+
+
+DCMigration &lt;- DCMigration.gather
+
+decade &lt;- subset(DCMigration, YEAR %in% seq(1900,2000,by=10))
+
+decade$midHeight &lt;- (decade$lowHeight + decade$highHeight)/2
+
+decade &lt;- gather(decade, key=heightType, value=height, -c(YEAR,region,propMoved))
+
+decade$labelx &lt;- decade$YEAR
+
+decade[decade$YEAR &lt;= 1920,&quot;labelx&quot;] &lt;- 1915
+decade[decade$YEAR &gt;= 2000,&quot;labelx&quot;] &lt;- 2000
+
+decade$labelEnd &lt;- NA
+
+decade[decade$region == &quot;south&quot;,&quot;labelEnd&quot;] &lt;- &quot;% of people \n born in DC lived in other states in the South&quot;
+decade[decade$region == &quot;northeast&quot;,&quot;labelEnd&quot;] &lt;- &quot;% of people \n born in DC lived in the Northeast&quot;
+decade[decade$region == &quot;midwest&quot;,&quot;labelEnd&quot;] &lt;- &quot;% of people \n born in DC lived in the Midwest&quot;
+decade[decade$region == &quot;west&quot;,&quot;labelEnd&quot;] &lt;- &quot;% of people born in DC \n lived in the West&quot;
+decade[decade$region == &quot;virginia&quot;,&quot;labelEnd&quot;] &lt;- &quot;% of people born in DC \n lived in Virginia&quot;
+decade[decade$region == &quot;maryland&quot;,&quot;labelEnd&quot;] &lt;- &quot;% of people born in DC \n lived in Maryland&quot;
+decade[decade$region == &quot;stayed&quot;,&quot;labelEnd&quot;] &lt;- &quot;% of people \n born in DC lived in DC&quot;
+
+ggplot(DCMigration,aes(YEAR)) +
+  geom_ribbon(aes(x=YEAR,ymin=lowHeight, ymax=highHeight,group=region,fill=region),color=&quot;white&quot;)+
+  labs(title=&quot;Where People born in D.C. have moved to:&quot;)+
+  scale_fill_manual(name=&quot;Legend&quot;, values=c(&quot;Stayed&quot;=&quot;gainsboro&quot;,
+                     &quot;Midwest&quot;=&quot;royalblue1&quot;,
+                     &quot;Northeast&quot;=&quot;hotpink3&quot;,
+                     &quot;South&quot;=&quot;greenyellow&quot;,
+                     &quot;Virginia&quot;=&quot;green&quot;,
+                     &quot;Maryland&quot;=&quot;red&quot;,
+                     &quot;West&quot;=&quot;darkgoldenrod&quot;))</code></pre>
+<p><img src="lab04_files/figure-html/stream%20graph%20more%20complex-1.png" width="672" /></p>
+<pre class="r"><code>  labs(title=&quot;Where People Born in D.C. have Moved to:&quot;)</code></pre>
+<pre><code>## $title
+## [1] &quot;Where People Born in D.C. have Moved to:&quot;
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;labels&quot;</code></pre>
+<p>This is the third attempt. It adds vertical dark gray lines in decade increments to increase the graph’s readabiliy.</p>
+<pre class="r"><code>graph &lt;- ggplot(DCMigration,aes(YEAR)) +
+  geom_point(data=decade,aes(x=YEAR,y=height),color=&quot;white&quot;)+
+  geom_ribbon(aes(ymin=lowHeight,ymax=highHeight,group=region,fill=region),color=&quot;white&quot;)+
+  theme_classic()+theme(axis.line.y=element_blank())+
+  geom_segment(data=decade, aes(x=YEAR,xend=YEAR),y=0,yend=1,color=&quot;gray60&quot;,alpha=0.7)+
+  scale_x_continuous(limits=c(1890,2025),breaks=seq(1900,2000,by=10),name=&quot;&quot;)+
+  scale_y_continuous(limits=c(0,1.01),name=&quot;&quot;)+theme(axis.ticks=element_blank(),axis.text.y=element_blank(),axis.line.x=element_blank())+
+  labs(title=&quot;Where people born in DC have moved to:&quot;)+
+  scale_fill_manual(name=&quot;Legend&quot;, values=c(&quot;Stayed&quot;=&quot;gainsboro&quot;,
+                     &quot;Midwest&quot;=&quot;royalblue1&quot;,
+                     &quot;Northeast&quot;=&quot;hotpink3&quot;,
+                     &quot;South&quot;=&quot;greenyellow&quot;,
+                     &quot;Virginia&quot;=&quot;green&quot;,
+                     &quot;Maryland&quot;=&quot;red&quot;,
+                     &quot;West&quot;=&quot;darkgoldenrod&quot;))+
+  labs(title=&quot;Where People Born in D.C. have Moved to:&quot;)
+graph</code></pre>
+<p><img src="lab04_files/figure-html/still%20chugging%20on%20stream%20graph-1.png" width="672" /></p>
+<p>Fourth attempt. This adds labels to say which region is which and remove the legend.</p>
+<pre class="r"><code>ribbonLabels &lt;- c(&quot;Other States in the South&quot;,&quot;Other States in the Northeast&quot;,&quot;Other States in the Midwest&quot;,&quot;Other States in the West&quot;,&quot;Virginia&quot;, &quot;Maryland&quot;, &quot;Stayed in DC&quot;)
+ribbonHeights &lt;- sort(decade[decade$heightType==&quot;midHeight&quot;&amp;decade$YEAR==1950,]$height)
+
+#Add labels to each segment
+g &lt;- graph + annotate(geom=&quot;text&quot;,x=rep(1950,7),y=ribbonHeights,label=ribbonLabels)
+
+DC1900 &lt;- DCMigration[DCMigration$YEAR==1900 &amp; DCMigration$region == &quot;Stayed&quot;,]
+DC1900height &lt;- (DC1900$highHeight+DC1900$lowHeight)/2
+
+DC2000 &lt;- DCMigration[DCMigration$YEAR==2000 &amp; DCMigration$region == &quot;Stayed&quot;,]
+DC2000height &lt;- (DC2000$highHeight+DC2000$lowHeight)/2
+
+Maryland2000 &lt;- DCMigration[DCMigration$YEAR==2000 &amp; DCMigration$region == &quot;Maryland&quot;,]
+Maryland2000height &lt;- (Maryland2000$highHeight+Maryland2000$lowHeight)/2
+
+Virginia2000 &lt;- DCMigration[DCMigration$YEAR==2000 &amp; DCMigration$region == &quot;Virginia&quot;,]
+Virginia2000height &lt;- (Virginia2000$highHeight+Virginia2000$lowHeight)/2
+
+#Add percentage to each segment
+g &lt;- g + annotate(geom=&quot;text&quot;,color=&quot;grey40&quot;,x=1900,y=DC1900height,hjust=0,label=paste(round(DC1900$propMoved,2)*100,&quot;%&quot;,sep=&quot;&quot;))+
+  annotate(geom=&quot;text&quot;,color=&quot;grey30&quot;,x=2000,y=DC2000height,hjust=1,label=paste(round(DC2000$propMoved,2)*100,&quot;%&quot;,sep=&quot;&quot;))+
+  annotate(geom=&quot;text&quot;,color=&quot;grey30&quot;,x=2000,y=Maryland2000height,hjust=1,label=paste(round(Maryland2000$propMoved,2)*100,&quot;%&quot;,sep=&quot;&quot;))+
+  annotate(geom=&quot;text&quot;,color=&quot;grey30&quot;,x=2000,y=Virginia2000height,hjust=1,label=paste(round(Virginia2000$propMoved,2)*100,&quot;%&quot;,sep=&quot;&quot;))+
+  theme(legend.position=&quot;none&quot;)
+
+g</code></pre>
+<p><img src="lab04_files/figure-html/last%20one%20we%20hope-1.png" width="672" /></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

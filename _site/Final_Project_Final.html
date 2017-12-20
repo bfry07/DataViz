@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Brian Fry, Alan Chen, Michelle Choi" />
+
+
+<title>Race, Economic, and Electoral Outcomes in the United States</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Portfolio</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Data Visualizations
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lab03FullLabReport.html">Hallucinogen Use</a>
+    </li>
+    <li>
+      <a href="lab04.html">DC Migration</a>
+    </li>
+    <li>
+      <a href="lab06.html">Diamonds</a>
+    </li>
+    <li>
+      <a href="lab05.html">Women in Congress</a>
+    </li>
+    <li>
+      <a href="Final_Project_Final.html">Race and Electoral &amp; Economic Outcomes in the United States</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Race, Economic, and Electoral Outcomes in the United States</h1>
+<h4 class="author"><em>Brian Fry, Alan Chen, Michelle Choi</em></h4>
+<h4 class="date"><em>12/7/2017</em></h4>
+
+</div>
+
+
+<div id="abstract" class="section level1">
+<h1>Abstract</h1>
+<p>Our group’s final project examined relationships between race, income, unemployment, and electoral outcomes between 2012 and 2016 in the United States. We constructed a Shiny appication that explored initial relationships between the variables, then created more detailed visualizations exploring broad trends among seelected variables and selected relationships of interest. We found that a state’s median household income was significantly correlated with its electoral results, with more Democratic states having higher household income. This relationship held most strongly for white households. White and Hispanic households also experienced correlated growth in household income with partisan change towards the Democrat between 2012 and 2016, while black households experienced the opposite trend.</p>
+</div>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>In the aftermath of the 2016 presidential election and Donald Trump’s stunning upset over Hillary Clinton, the media postmortem was focused on pinning down an exact reason “why” that could explain Trump’s victory. Two competing explanations of Trump’s historic levels of support from white voters emerged, one focused on race and the other on economics. That is, had Trump ridden a “whitelash” of angry white voters against Obama’s racial legacy to office, or had he tapped into the economic anxieties of overlooked and neglected rural white voters? For context, see Mark Lilla’s Sunday essay in <em>The New York Times</em> two weeks after the election in which he explores the intersection of both explanations and Democrats’ role in shaping Trump’s victory: <a href="https://www.nytimes.com/2016/11/20/opinion/sunday/the-end-of-identity-liberalism.html" class="uri">https://www.nytimes.com/2016/11/20/opinion/sunday/the-end-of-identity-liberalism.html</a></p>
+<p>Our group’s final project examines relationships between race, economic outcomes, and electoral outcomes in the United States. Specifically, we are interested in examining correlations between statewaide unemployment, median income by state and race, and presidential election results for the years 2012 and 2016.</p>
+<p>Our guiding research questions are:</p>
+<ul>
+<li>How is race related to economic outcomes like unemployment and income?</li>
+<li>Is electoral partisanship correlated with racial and economic outcomes broadly?</li>
+<li>How does the change in a state’s economic outcomes affect its electoral results between 2012 and 2016?</li>
+</ul>
+</div>
+<div id="data-description" class="section level1">
+<h1>Data Description</h1>
+<p>We used three sources of data for our project:</p>
+<ul>
+<li>Statewide unemplyoment data from the Bureau of Labor Statistics: <a href="https://www.bls.gov/lau" class="uri">https://www.bls.gov/lau</a></li>
+<li>Household income data by state and race from the American Communities Survey by the Census Bureau: <a href="https://www.census.gov/programs-surveys/acs/" class="uri">https://www.census.gov/programs-surveys/acs/</a></li>
+<li>Statewide 2012 and 2016 presidential election results from the US Election Atlas: <a href="https://uselectionatlas.org/" class="uri">https://uselectionatlas.org/</a></li>
+</ul>
+<p>Since each of these files came in .csv formats, we found it easier to first arrange the data in Excel, then do light, residual cleaning in R.</p>
+<p>Our data includes the statewide electoral margin for the presidential elections in 2016 and 2012, the statewide unemployment rates for the years 2016 and 2012, and median household income by state and racial group for the years 2016 and 2012.</p>
+<p><strong>Notation:</strong> Positive electoral margins indicate the Democrat received more votes. Negative electoral margins indicate the Republican received more votes. All changes in variables are 2016 values minus 2012 values.</p>
+<pre class="r"><code>library(tidyverse)
+library(RColorBrewer)
+library(ggparallel)
+library(ggalluvial)
+library(maps)
+library(mapproj)
+library(gridExtra)
+
+stateData &lt;- read.csv(&quot;stateData.csv&quot;,header=TRUE)
+names(stateData)[1:5]&lt;-c(&quot;State&quot;,&quot;unemployment2016&quot;,&quot;unemployment2012&quot;,&quot;margin2016&quot;,&quot;margin2012&quot;)
+
+stateData&lt;-mutate(stateData,unemploymentChange=unemployment2016-unemployment2012)
+stateData&lt;-mutate(stateData,marginChange=margin2016-margin2012)
+
+stateData$Median.Income.Black.2012&lt;-as.numeric(as.character(stateData$Median.Income.Black.2012))
+
+save(stateData, file=&quot;stateData.RData&quot;)</code></pre>
+</div>
+<div id="graph-designs" class="section level1">
+<h1>Graph Designs</h1>
+<div id="design-process" class="section level2">
+<h2>Design Process</h2>
+<p>We began by coding our exploratory Shiny application in order to see what initial, interesting relationships we could discover within and between our variables. After we had identified several relationships we wanted to explore further, we decided on a two-fold approach: first graphing our variables independently to understand high-level trends between 2012 and 2016, then graphing selected relationships between them in order to understand the nuanced ways in which they were related. Finally, prompted by trends we noticed in our grouped scatterplot comparing electoral margin to racial income, we constructed two side-by-side plots of the United States with the states’ colors determined by two different variables for a visual comparison.</p>
+</div>
+<div id="summary-plots-showing-the-change-in-our-variables" class="section level2">
+<h2>Summary Plots Showing the Change in our Variables</h2>
+<div id="alluvial-plot-showing-change-in-swing-states" class="section level3">
+<h3>Alluvial Plot Showing Change in Swing States</h3>
+<p>This plot shows how the number of states that had close electoral margins grew from 2012 to 2016.</p>
+<pre class="r"><code>close &lt;- 6
+
+stateData &lt;- mutate(stateData, close12=ifelse(margin2012 &gt; close, &quot;Heavily Democrat&quot;,
+                                              ifelse(margin2012 &lt; -close, &quot;Heavily Republican&quot;, &quot;Close&quot;)))
+stateData &lt;- mutate(stateData, close16=ifelse(margin2016 &gt; close, &quot;Heavily Democrat&quot;,
+                                              ifelse(margin2016 &lt; -close, &quot;Heavily Republican&quot;, &quot;Close&quot;)))
+
+stateData$close12 &lt;- factor(stateData$close12, c(&quot;Close&quot;,&quot;Heavily Democrat&quot;,&quot;Heavily Republican&quot;))
+stateData$close16 &lt;- factor(stateData$close16, c(&quot;Close&quot;,&quot;Heavily Democrat&quot;,&quot;Heavily Republican&quot;))
+
+# Add region to data
+northeast_states&lt;- c(&quot;Connecticut&quot;, &quot;Maine&quot;, &quot;Massachusetts&quot;, &quot;New Hampshire&quot;, &quot;Rhode Island&quot;, &quot;Vermont&quot;, &quot;New Jersey&quot;, &quot;New York&quot;, &quot;Pennsylvania&quot;)
+midwest_states &lt;- c(&quot;Illinois&quot;, &quot;Indiana&quot;, &quot;Michigan&quot;, &quot;Ohio&quot;, &quot;Wisconsin&quot;, &quot;Iowa&quot;, &quot;Kansas&quot;, &quot;Minnesota&quot;, &quot;Missouri&quot;, &quot;Nebraska&quot;, &quot;North Dakota&quot;, &quot;South Dakota&quot;)
+south_states &lt;- c(&quot;Delaware&quot;, &quot;Florida&quot;, &quot;Georgia&quot;, &quot;Maryland&quot;, &quot;North Carolina&quot;, &quot;South Carolina&quot;, &quot;Virginia&quot;, &quot;District of Columbia&quot;, &quot;West Virginia&quot;, &quot;Alabama&quot;, &quot;Kentucky&quot;, &quot;Mississippi&quot;, &quot;Tennessee&quot;, &quot;Arkansas&quot;, &quot;Louisiana&quot;, &quot;Oklahoma&quot;, &quot;Texas&quot;)
+west_states &lt;- c(&quot;Arizona&quot;, &quot;Colorado&quot;, &quot;Idaho&quot;, &quot;Montana&quot;, &quot;Nevada&quot;, &quot;New Mexico&quot;, &quot;Utah&quot;, &quot;Wyoming&quot;, &quot;Alaska&quot;, &quot;California&quot;, &quot;Hawaii&quot;, &quot;Oregon&quot;, &quot;Washington&quot;)
+
+stateData &lt;- mutate(stateData, region=ifelse(State %in% northeast_states, &quot;Northeast&quot;,
+                                                 ifelse(State %in% midwest_states, &quot;Midwest&quot;,
+                                                        ifelse(State %in% south_states, &quot;South&quot;,
+                                                               ifelse(State %in% west_states, &quot;West&quot;,&quot;USA&quot;)))))
+
+# Track states with close margins in 2012 to those in 2016
+g1 &lt;- ggplot(stateData,aes(axis1=close12, axis2=close16))+
+  geom_alluvium(aes(fill = region))+
+  geom_stratum()+
+  geom_label(stat=&quot;stratum&quot;,label.strata=TRUE)+
+  labs(title = &quot;Shift in Swing State Status from 2012 to 2016, by Region&quot;)+
+  scale_x_continuous(breaks = 1:2, labels = c(&quot;2012&quot;, &quot;2016&quot;)) +
+  theme_minimal() + theme(axis.text.y=element_blank())
+
+g1</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/swing-1.png" width="672" /></p>
+</div>
+<div id="parallel-coordinate-plot-showing-change-in-margin-by-state" class="section level3">
+<h3>Parallel Coordinate Plot Showing Change in Margin by State</h3>
+<pre class="r"><code>marginChange &lt;- select(stateData, &quot;State&quot;, &quot;margin2012&quot;, &quot;margin2016&quot;, &quot;region&quot;)
+marginChange.g &lt;- gather(marginChange, key, value, c(2:3))
+
+ggplot(marginChange.g, aes(x=key, y=value,group=State))+geom_line(aes(color = value))+
+  scale_color_gradient2(name = &quot;Electoral Margin, 2012&quot;, low = &quot;red&quot;, mid = &quot;gray&quot;, high = &quot;blue&quot;)+theme_minimal()+
+  labs(title=&quot;Presidential Electoral Margin Shift from 2012 to 2016&quot;, x = &quot;Year&quot;, y = &quot;Margin&quot;)</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/margin-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(marginChange.g, aes(x=key, y=value,group=State))+geom_line(aes(color = region))+theme_minimal()+
+  labs(title=&quot;Presidential Electoral Margin Shift from 2012 to 2016&quot;, x = &quot;Year&quot;, y = &quot;Margin&quot;)</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/margin-2.png" width="672" /></p>
+</div>
+<div id="parallel-coordinate-plot-showing-change-in-median-income-by-state" class="section level3">
+<h3>Parallel Coordinate Plot Showing Change in Median Income by State</h3>
+<pre class="r"><code>#Shows changes in median income similarly
+incomeChange &lt;- select(stateData, &quot;State&quot;, &quot;Median.Income.All.2012&quot;, &quot;Median.Income.All.2016&quot;, &quot;region&quot;)
+incomeChange.g &lt;- gather(incomeChange, key, value, c(2:3))
+
+ggplot(incomeChange.g, aes(x=key, y=value,group=State))+geom_line(aes(color = value))+
+  scale_color_gradient(name = &quot;Median Income, 2012&quot;, low = &quot;white&quot;, high = &quot;darkgreen&quot;)+
+  theme_minimal()+
+  labs(title=&quot;Median Income Shift from 2012 to 2016&quot;, x = &quot;Year&quot;, y = &quot;Median Income, All Races&quot;)</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/income-1.png" width="672" /></p>
+<pre class="r"><code>g2 &lt;- ggplot(incomeChange.g, aes(x=key, y=value,group=State))+geom_line(aes(color = region))+
+  theme_minimal()+
+  labs(title=&quot;Median Income Shift from 2012 to 2016&quot;, x = &quot;Year&quot;, y = &quot;Median Income, All Races&quot;)
+
+g2</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/income-2.png" width="672" /></p>
+</div>
+<div id="parallel-coordinate-plot-showing-change-in-unemployment-rate-by-state" class="section level3">
+<h3>Parallel Coordinate Plot Showing Change in Unemployment Rate by State</h3>
+<pre class="r"><code># Show change in unemployment in the same way
+empChange &lt;- select(stateData, &quot;State&quot;, &quot;unemployment2016&quot;, &quot;unemployment2012&quot;, &quot;region&quot;)
+empChange.g &lt;- gather(empChange, key, value, c(2:3))
+
+ggplot(empChange.g, aes(x=key, y=value,group=State))+geom_line(aes(color = value))+
+  scale_color_gradient2(name = &quot;Unemployment %, 2012&quot;, low = &quot;white&quot;, high = &quot;red&quot;)+
+  theme_minimal()+
+  labs(title=&quot;Unemployment Shift from 2012 to 2016&quot;, x = &quot;Year&quot;, y = &quot;Unemployment, All Races&quot;)</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unemp-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(empChange.g, aes(x=key, y=value,group=State))+geom_line(aes(color = region))+
+  theme_minimal()+
+  labs(title=&quot;Unemployment Shift from 2012 to 2016&quot;, x = &quot;Year&quot;, y = &quot;Unemployment, All Races&quot;)</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unemp-2.png" width="672" /></p>
+</div>
+<div id="boxplots-showing-absolute-median-income-by-race-in-2016-and-change-in-median-income-by-race-between-2012-and-2016" class="section level3">
+<h3>Boxplots Showing Absolute Median Income by Race in 2016 and Change in Median Income by Race between 2012 and 2016</h3>
+<pre class="r"><code>stateData.boxplot &lt;- stateData
+
+stateData.boxplot&lt;-mutate(stateData.boxplot, whiteDif=Median.Income.White.2016-Median.Income.White.2012)
+stateData.boxplot&lt;-mutate(stateData.boxplot, blackDif=Median.Income.Black.2016-Median.Income.Black.2012)
+stateData.boxplot&lt;-mutate(stateData.boxplot, hispanicDif=Median.Income.Hispanic.or.Latino.2016-Median.Income.Hispanic.or.Latino.2012)
+
+g3 &lt;- ggplot(stateData.boxplot) +
+  geom_boxplot(aes(x=1,y=Median.Income.White.2016),fill=&quot;red&quot;) +
+  geom_boxplot(aes(x=2,y=Median.Income.Black.2016),fill=&quot;green&quot;) +
+  geom_boxplot(aes(x=3,y=Median.Income.Hispanic.or.Latino.2016),fill=&quot;blue&quot;) +
+  scale_x_discrete(limits=c(&quot;White&quot;,&quot;Black&quot;,&quot;Hispanic&quot;)) +
+  labs(title=&quot;2016 Household Median Income By Race&quot;,y=&quot;Household Median Income&quot;,x=&quot;Race&quot;) +
+  theme_minimal()
+
+g3</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(stateData.boxplot) +
+  geom_boxplot(aes(x=1,y=whiteDif),fill=&quot;red&quot;) +
+  geom_boxplot(aes(x=2,y=blackDif),fill=&quot;green&quot;) +
+  geom_boxplot(aes(x=3,y=hispanicDif),fill=&quot;blue&quot;) +
+  scale_x_discrete(limits=c(&quot;White&quot;,&quot;Black&quot;,&quot;Hispanic&quot;)) +
+  labs(title=&quot;Change in Household Median Income By Race from 2016 to 2012&quot;,y=&quot;Change in Household Median Income&quot;,x=&quot;Race&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+</div>
+</div>
+<div id="relational-plots-between-median-income-and-electoral-outcomes-unemployment-rates" class="section level2">
+<h2>Relational Plots Between Median Income and Electoral Outcomes, Unemployment Rates</h2>
+<div id="grouped-scatterplot-showing-electoral-margin-vs.racial-income" class="section level3">
+<h3>Grouped Scatterplot showing Electoral Margin vs. Racial Income</h3>
+<pre class="r"><code>load(&quot;stateData.RData&quot;)
+
+stateData.g &lt;- gather(stateData, race, medianIncome, c(16,17,23))
+stateData.g &lt;- mutate(stateData.g, households = ifelse(race==&quot;Median.Income.White.2016&quot;, Households.White,
+                                                     ifelse(race==&quot;Median.Income.Black.2016&quot;, Households.Black, Households.Hispanic.or.Latino)))
+
+g4 &lt;- ggplot(data=stateData.g) +
+  geom_point(aes(x=margin2016,y=medianIncome,size=households,group=race,fill=factor(race)),shape=21,color=&quot;black&quot;) +
+  geom_smooth(aes(x=margin2016,y=medianIncome,group=race,color=factor(race)),method=&quot;lm&quot;,se=F,formula=y~poly(x,1)) +
+  labs(title=&quot;State Electoral Margin vs. Household Income By Race&quot;,x=&quot;2016 Electoral Margin&quot;,y=&quot;Household Median Income&quot;) +
+  guides(size=guide_legend(title=&quot;Number of Households&quot;), fill=guide_legend(title=&quot;Race&quot;)) +
+  scale_fill_manual(values=c(&quot;green&quot;,&quot;blue&quot;,&quot;red&quot;),labels=c(&quot;Black&quot;,&quot;Hispanic&quot;,&quot;White&quot;)) +
+  scale_color_manual(values=c(&quot;green&quot;,&quot;blue&quot;,&quot;red&quot;),guide=FALSE) +
+  theme_minimal()
+
+g4</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="change-in-electoral-margin-vs.change-in-racial-income" class="section level3">
+<h3>Change in Electoral Margin vs. Change in Racial Income</h3>
+<pre class="r"><code>stateData.g &lt;- mutate(stateData, whiteChange=Median.Income.White.2016-Median.Income.White.2012, blackChange=Median.Income.Black.2016-Median.Income.Black.2012, hispanicChange=Median.Income.Hispanic.or.Latino.2016-Median.Income.Hispanic.or.Latino.2012)
+stateData.g &lt;- gather(stateData.g, race, medianIncomeChange, c(34,35,36))
+stateData.g &lt;- mutate(stateData.g, households = ifelse(race==&quot;whiteChange&quot;, Households.White,
+                                                       ifelse(race==&quot;blackChange&quot;, Households.Black, Households.Hispanic.or.Latino)))
+
+g5 &lt;- ggplot(data=stateData.g) +
+  geom_point(aes(x=marginChange,y=medianIncomeChange,size=households,group=race,fill=factor(race)),shape=21,color=&quot;black&quot;) +
+  geom_smooth(aes(x=marginChange,y=medianIncomeChange,group=race,color=factor(race)),method=&quot;lm&quot;,se=F,formula=y~poly(x,1)) +
+  labs(title=&quot;Electoral Margin Change vs. Household Income Change&quot;,x=&quot;Electoral Margin Change From 2012 to 2016&quot;,y=&quot;Household Median Income Change From 2012 to 2016&quot;) +
+  guides(size=guide_legend(title=&quot;Number of Households&quot;), fill=guide_legend(title=&quot;Race&quot;)) +
+  scale_fill_manual(values=c(&quot;green&quot;,&quot;blue&quot;,&quot;red&quot;),labels=c(&quot;Black&quot;,&quot;Hispanic&quot;,&quot;White&quot;)) +
+  scale_color_manual(values=c(&quot;green&quot;,&quot;blue&quot;,&quot;red&quot;),guide=FALSE) +
+  theme_minimal()
+
+g5</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="unemployment-rate-vs.racial-income" class="section level3">
+<h3>Unemployment Rate vs. Racial Income</h3>
+<pre class="r"><code>stateData.g &lt;- gather(stateData, race, medianIncome, c(16,17,23))
+stateData.g &lt;- mutate(stateData.g, households = ifelse(race==&quot;Median.Income.White.2016&quot;, Households.White,
+                                                       ifelse(race==&quot;Median.Income.Black.2016&quot;, Households.Black, Households.Hispanic.or.Latino)))
+
+ggplot(data=stateData.g) +
+  geom_point(aes(x=unemployment2016,y=medianIncome,size=households,group=race,fill=factor(race)),shape=21,color=&quot;black&quot;) +
+  geom_smooth(aes(x=unemployment2016,y=medianIncome,group=race,color=factor(race)),method=&quot;lm&quot;,se=F,formula=y~poly(x,1)) +
+  labs(title=&quot;Unemployment Rate vs. Household Income By Race&quot;,x=&quot;2016 Unemployment Rate (%)&quot;,y=&quot;Household Median Income&quot;) +
+  guides(size=guide_legend(title=&quot;Number of Households&quot;), fill=guide_legend(title=&quot;Race&quot;)) +
+  scale_fill_manual(values=c(&quot;green&quot;,&quot;blue&quot;,&quot;red&quot;),labels=c(&quot;Black&quot;,&quot;Hispanic&quot;,&quot;White&quot;)) +
+  scale_color_manual(values=c(&quot;green&quot;,&quot;blue&quot;,&quot;red&quot;),guide=FALSE) +
+  theme_minimal()</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="change-in-unemployment-rate-vs.change-in-racial-income" class="section level3">
+<h3>Change in Unemployment Rate vs. Change in Racial Income</h3>
+<pre class="r"><code>stateData.g &lt;- mutate(stateData, whiteChange=Median.Income.White.2016-Median.Income.White.2012, blackChange=Median.Income.Black.2016-Median.Income.Black.2012, hispanicChange=Median.Income.Hispanic.or.Latino.2016-Median.Income.Hispanic.or.Latino.2012)
+stateData.g &lt;- gather(stateData.g, race, medianIncomeChange, c(34,35,36))
+stateData.g &lt;- mutate(stateData.g, households = ifelse(race==&quot;whiteChange&quot;, Households.White,
+                                                       ifelse(race==&quot;blackChange&quot;, Households.Black, Households.Hispanic.or.Latino)))
+
+ggplot(data=stateData.g) +
+  geom_point(aes(x=unemploymentChange,y=medianIncomeChange,size=households,group=race,fill=factor(race)),shape=21,color=&quot;black&quot;) +
+  geom_smooth(aes(x=unemploymentChange,y=medianIncomeChange,group=race,color=factor(race)),method=&quot;lm&quot;,se=F,formula=y~poly(x,1)) +
+  labs(title=&quot;Unemployment Rate Change vs. Household Income Change&quot;,x=&quot;Unemployment Rate Change From 2012 to 2016 (%)&quot;,y=&quot;Household Median Income Change From 2012 to 2016&quot;) +
+  guides(size=guide_legend(title=&quot;Number of Households&quot;), fill=guide_legend(title=&quot;Race&quot;)) +
+  scale_fill_manual(values=c(&quot;green&quot;,&quot;blue&quot;,&quot;red&quot;),labels=c(&quot;Black&quot;,&quot;Hispanic&quot;,&quot;White&quot;)) +
+  scale_color_manual(values=c(&quot;green&quot;,&quot;blue&quot;,&quot;red&quot;),guide=FALSE) +
+  theme_minimal()</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="coordinate-plots-of-the-united-states-comparing-white-houshold-income-and-2016-electoral-margin" class="section level3">
+<h3>Coordinate Plots of the United States Comparing White Houshold Income and 2016 Electoral Margin</h3>
+<p>These two plots help provide a visual comparison of the states with a high white median household income and states’ electoral margins. Both graphs are filled with a single gradient of color, which though unconventional for partisan electoral graphs, helps with side-by-side comparison and identfying commonalities.</p>
+<pre class="r"><code>all_states &lt;- map_data(&quot;state&quot;)
+
+stateData_temp &lt;- stateData
+
+names(stateData_temp)[1] &lt;- &quot;region&quot;
+stateData_temp[[1]]&lt;-tolower(stateData_temp[[1]])
+
+stateData_map &lt;- merge(all_states, stateData_temp, by=&quot;region&quot;)
+stateData_map &lt;- stateData_map[order(stateData_map$order),]
+
+rm(stateData_temp)
+
+whiteincomePlot &lt;- ggplot() +
+  geom_polygon(data=stateData_map,aes(x=long, y=lat, group = group, fill=Median.Income.White.2016),color=&quot;grey50&quot;) +
+  coord_map() +
+  labs(x=&quot;&quot;,y=&quot;&quot;,title=&quot;White Median Household Income&quot;) +
+  theme_classic() +
+  theme(axis.ticks.y = element_blank(),axis.text.y = element_blank(), axis.ticks.x = element_blank(),axis.text.x = element_blank()) +
+  scale_fill_gradient(name=&quot;Income&quot;,low=&quot;whitesmoke&quot;,high=&quot;darkgreen&quot;)
+
+marginPlot &lt;- ggplot() +
+  geom_polygon(data=stateData_map,aes(x=long, y=lat, group = group, fill=margin2016),color=&quot;grey50&quot;) +
+  coord_map() +
+  labs(x=&quot;&quot;,y=&quot;&quot;,title=&quot;2016 Electoral Margin&quot;) +
+  theme_classic() +
+  theme(axis.ticks.y = element_blank(),axis.text.y = element_blank(), axis.ticks.x = element_blank(),axis.text.x = element_blank()) +
+  scale_fill_gradient(name=&quot;Margin&quot;,low=&quot;whitesmoke&quot;,high=&quot;darkblue&quot;)
+
+grid.arrange(whiteincomePlot,marginPlot)</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="workflow-description" class="section level1">
+<h1>Workflow Description</h1>
+<p>We began by identifying the variables we were interested in comparing and finding datasets for those. Since our data came from three disparate sources, we decided to first organize the data in Excel before importing it for residual cleaning.</p>
+<p>We then coded our data explorer Shiny application. For the Shiny application, since we were interested in showcasing two-variable relationships that we suspected were linearly correlated, we decided to use a scatterplot as the central graph type. From there, we gave users the ability to select different variables to graph against electoral results, as well as various customization options to help clarify and identify further trends in the data.</p>
+<p>Finally, based on the initial trends we noticed from our Shiny application, we chose several visualizations to create that identified the trends (or lack thereof) in order to answer our initial research questions.</p>
+</div>
+<div id="final-analysis" class="section level1">
+<h1>Final Analysis</h1>
+<div id="selected-visualizations" class="section level2">
+<h2>Selected Visualizations</h2>
+<p>The following are our selected visualizations:</p>
+<pre class="r"><code>g1</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre class="r"><code>g2</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
+<pre class="r"><code>g3</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-8-3.png" width="672" /></p>
+<pre class="r"><code>g4</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-8-4.png" width="672" /></p>
+<pre class="r"><code>g5</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-8-5.png" width="672" /></p>
+<pre class="r"><code>grid.arrange(whiteincomePlot,marginPlot)</code></pre>
+<p><img src="Final_Project_Final_files/figure-html/unnamed-chunk-8-6.png" width="672" /></p>
+<p>As a reminder, our research questions were:</p>
+<ul>
+<li>How is race related to economic outcomes like unemployment and income?</li>
+<li>Is electoral partisanship correlated with racial and economic outcomes broadly?</li>
+<li>How does the change in a state’s economic outcomes affect its electoral results between 2012 and 2016?</li>
+</ul>
+<p>Our first two selected graphs are useful for understanding the change in presidential election results from 2012 to 2016 and the change in household income between the same years at a broad level. It is evident that the 2016 election swung more Republican than in 2012, with more Close states in 2012 becoming Heavily Republican than Heavily Democrat and more Heavily Democrat states than Heavily Republican ones becoming Close. It is also clear that nearly all states experienced increases median household income between 2012 and 2016.</p>
+<p>The race of a household’s primary income-earner is heavily correlated with household median income. As can be seen from our boxplot graph of Median Household Income by Race in 2016 and from our scatterplot graph of Electoral Margin vs. Household Income by Race, white household income is consistently the highest across the 50 states, followed by Hispanic then black household income.</p>
+<p>As our Shiny application shows, a state’s presidential electoral results are correlated with its median household income overall, with wealthier states being more Democratic than poorer ones. The scatterplot graph of Household Income by Race vs. Electoral Margin also shows that this trend holds across racial breakdowns. Interestingly, though median income increases for all races the more Democratic a state votes, it increases more per percentage point for white households.</p>
+<p>Our scatterplot graph of the Change in Electoral Margin vs. change in Household Income by Race shows that while for white and Hispanic households, a state becoming more Democratic in 2016 as compared to 2012 was associated with an increase in median income. The opposite was true for black households, for whom a state becoming less Democratic (more Republican) was associated with an increase in median income, though this relationship may be dominated by a few influential outliers.</p>
+<p>Because our results showed white household income being more strongly associated with partisan results, we created two maps of the United States, one colored by white household income and one colored by the 2016 election results. A visual comparison also confirms this trend, with the regions of the country with the wealthiest white populations also voting the most strongly for the Democratic presidential candidate.</p>
+<p>In both our Shiny application comparing a state’s unemployment rate and changes therein to its electoral results and in our scatterplots breaking down the relationship between unemployment rate and household income by race, no significant relationships were discovered.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
